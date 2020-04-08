@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oxygen&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/658ee16d86.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- main page -->
+    <div id='main-page' class="welcome-section">
+      <nav class="navbar">
+        <h1 class="logo"><span></span> <a href="#">TravelApp</a></h1>
+      </nav>
+
+      <section class="hero-section">
+        <section class="text">
+          <h2 class="title">
+            City? Town? Countryside?
+          </h2>
+          <h2 class="subtitle">
+            Your perfect travel destination
+          </h2>
+        </section>
+
+        <div id="search-form">
+          <form id="main-form">
+            <div id="place-form">
+              <label for="">Place</label>
+              <i class="fas fa-street-view"></i>
+              <input
+                type="text"
+                onfocus="this.value=''"
+                placeholder="Where do you want to go?"
+                id="place"
+                name="place"
+              />
+            </div>
+
+          <div class="row">
+            <div class="time-box">
+              <div id="arrive-form">
+                <label for="">Arrive</label>
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                <input
+                  onfocus="this.value=''"
+                  type="date"
+                  name="trip-start"
+                  placeholder="Arrive"
+                  id="arrive"
+                  value=""
+                  min="2020-04-08"                  
+                  pattern="\d{4}-\d{2}-\d{2}"
+                  required
+                />
+              </div>
+
+              <div id="depart-form">
+                <label for="">Depart</label>
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                <input
+                  onfocus="this.value=''"
+                  type="date"
+                  name="trip-end"
+                  placeholder="Depart"
+                  id="depart"
+                  value=""
+                  min="2020-04-08"                  
+                  pattern="\d{4}-\d{2}-\d{2}"
+                  required
+                />
+              </div>
+            </div>
+            <div id="submit" class="btn-search">
+              <i class="fas fa-search"></i>
+              <input type="submit" value="Search" class="btn-text" />
+            </div>
+          </div>
+          </form>
+        </div>
+      </section>
+
+      <footer id="footer">
+        <section class="photo-credits">
+          Image by
+          <a
+            href="https://pixabay.com/users/tpsdave-12019/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1993704"
+            >David Mark</a
+          >
+        </section>
+        <section class="credits">
+          <p>Made for Chingu Voyage 12 <a href="https://github.com/chingu-voyages/v17-toucans-team-02">Team Toucans 02</a></p>
+        </section>
+      </footer>
+    </div>
+    <!-- user account  -->
+    <div id='user-account' class='hide'>
+      <div class="upper-container">
+        <div id='weather-box'>
+          <h1 id='city-name'>City</h1>
+          <div id='weathers'>
+              <div id='initial-weather' class='weather firstday'></div>
+              <div id='final-weather' class='weather finalday'></div>
+          </div>
+          <p id='check-more'>Check more about weather <a href='https://openweathermap.org/city' target="_blank" id='more-weather'>here</a></p>
+      </div>
+      <div class='city-boxes'>
+          <button value= "thingstodo" id="thingstodo-btn"class= 'things-to-do-box box'><i class="fas fa-walking"></i>&nbsp;&nbsp;&nbsp;Things to do</button>
+          <button value="hotels" id="hotels-btn" class='hotels-box box'><i class="fas fa-concierge-bell"></i>&nbsp;&nbsp;&nbsp;Hotels</button>
+          <button value="restaurants" id="restaurants-btn"class='restaurants-box box'><i class="fas fa-utensils"></i>&nbsp;&nbsp;&nbsp;Restaurants</button>
+          <button value="monuments" id="monuments-btn"class='monuments-box box'><i class="fas fa-landmark"></i></i>&nbsp;&nbsp;&nbsp;Monuments</button>
+    </div>
+      </div>
+  
+    <div id="showInfoDiv" class="hide">
+        <div id="show-info"></div>
+        <button id="close-bar"><i class="fas fa-angle-double-up"></i></button>
+    </div>
+    <div id='todo-list-container'>
+          <h3 id='cant-forget-title'>Can't forget...</h3>
+            <div id='inputs'>
+              <input type='text' id='todo-input-bar' placeholder="Add what you can't forget">
+              <button id='add-todo-btn'>Add</button>
+            </div>  
+              <ul id='todo-list'>
+              </ul>
+     </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
